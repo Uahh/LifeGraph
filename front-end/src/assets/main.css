@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background: #F3F4FA;
+}
+
+.main-page {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.left-container {
+    position: absolute;
+    top: 58px;
+    height: 100%;
+}
+
+.handler {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    height: 100px;
+    cursor: col-resize;
+    z-index: 100;
+    background-color: transparent;
+    border-left: 1px solid #ececec;
+    background-color: black;
+}
+
+.right-container {
+    position: absolute;
+    top: 58px;
+    padding: 0;
+    padding-left: 5px;
+    border: none;
+    z-index: 30;
+}

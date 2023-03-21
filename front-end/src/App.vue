@@ -1,5 +1,27 @@
+<template>
+  <el-menu class="el-menu-demo" mode="horizontal" @select="handleSelect">
+    <el-menu-item index="1">Processing Center</el-menu-item>
+    <el-menu-item index="1">
+      <b>Animation List</b>
+    </el-menu-item>
+    <el-menu-item index="2" style="margin-left: auto;">
+      <b>Github</b>
+    </el-menu-item>
+  </el-menu>
+  <div id="main-page" class="main-page">
+    <div id="left-container" class="left-container">
+      <p>abc</p>
+    </div>
+    <div id="handler" class="handler"></div>
+    <div id="right-container" class="right-container">
+      <p>abc</p>
+    </div>
+  </div>
+</template>
+
 <script lang="ts">
 import { defineComponent } from 'vue'
+import './assets/main.css'
 
 export default defineComponent({
   data() {
@@ -22,32 +44,9 @@ export default defineComponent({
 })
 </script>
 
-<template>
-  <el-row>
-    <el-col :span="24">
-      <el-menu  class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        <el-menu-item index="1">Processing Center</el-menu-item>
-        <el-sub-menu index="2">
-          <template #title>Workspace</template>
-          <el-menu-item index="2-1">item one</el-menu-item>
-          <el-menu-item index="2-2">item two</el-menu-item>
-          <el-menu-item index="2-3">item three</el-menu-item>
-          <el-sub-menu index="2-4">
-            <template #title>item four</template>
-            <el-menu-item index="2-4-1">item one</el-menu-item>
-            <el-menu-item index="2-4-2">item two</el-menu-item>
-            <el-menu-item index="2-4-3">item three</el-menu-item>
-          </el-sub-menu>
-        </el-sub-menu>
-        <el-menu-item index="3" disabled>Info</el-menu-item>
-        <el-menu-item index="4">Orders</el-menu-item>
-      </el-menu>
-    </el-col>
-  </el-row>
-</template>
 
 <style scoped>
 .el-menu-demo {
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 </style>
